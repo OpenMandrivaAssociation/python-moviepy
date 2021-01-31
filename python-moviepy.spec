@@ -11,6 +11,11 @@ Source0:        https://pypi.io/packages/source/m/%{pypi_name}/%{pypi_name}-%{ve
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(imageio-ffmpeg)
+BuildRequires:  python3dist(proglog)
+
+Requires: python3dist(imageio-ffmpeg)
+Requires: python3dist(proglog)
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
 %description
