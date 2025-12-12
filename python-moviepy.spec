@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.0.3
-Release:        3
+Release:        4
 Group:          Development/Python
 Summary:        Video editing with Python
 License:        MIT
