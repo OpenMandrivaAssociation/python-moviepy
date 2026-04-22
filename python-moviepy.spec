@@ -8,6 +8,7 @@ Summary:        Video editing with Python
 License:        MIT
 URL:            https://zulko.github.io/moviepy/
 Source0:        https://pypi.io/packages/source/m/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Patch0:         relax-pillow-dep.patch
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3dist(setuptools)
@@ -27,7 +28,7 @@ examples of use at https://zulko.github.io/moviepy/gallery.html.
 
 
 %prep
-%setup -q -n %{pypi_name}-%{version}
+%autosetup -n %{pypi_name}-%{version} -p1
 
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
