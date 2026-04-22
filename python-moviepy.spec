@@ -41,5 +41,5 @@ rm -rf %{pypi_name}.egg-info
 %files
 %doc README* docs
 %license LICENCE.txt
-#{python_sitelib}/moviepy-%{version}-py*.*.egg-info/
+%{python_sitelib}/moviepy-%{version}.dist-info
 %{python_sitelib}/moviepy/*
