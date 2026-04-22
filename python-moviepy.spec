@@ -13,6 +13,7 @@ BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(imageio-ffmpeg)
 BuildRequires:  python3dist(proglog)
+BuildRequires:  python3dist(pip)
 
 Requires: python3dist(imageio-ffmpeg)
 Requires: python3dist(proglog)
