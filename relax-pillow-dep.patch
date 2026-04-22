@@ -1,0 +1,12 @@
+diff -uraN moviepy-2.2.1/pyproject.toml omv-moviepy-2.2.1/pyproject.toml
+--- moviepy-2.2.1/pyproject.toml	2025-05-21 21:31:29.000000000 +0200
++++ omv-moviepy-2.2.1/pyproject.toml	2026-04-22 20:58:44.556339040 +0200
+@@ -33,7 +33,7 @@
+     "numpy>=1.25.0",
+     "proglog<=1.0.0",
+     "python-dotenv>=0.10",
+-    "pillow>=9.2.0,<12.0",
++    "pillow>=9.2.0,<13.0",
+ ]
+ 
+ [project.optional-dependencies]

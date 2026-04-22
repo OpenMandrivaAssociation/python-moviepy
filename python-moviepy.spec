@@ -1,18 +1,20 @@
 %global pypi_name moviepy
 
 Name:           python-%{pypi_name}
-Version:        1.0.3
-Release:        5
+Version:        2.2.1
+Release:        1
 Group:          Development/Python
 Summary:        Video editing with Python
 License:        MIT
 URL:            https://zulko.github.io/moviepy/
 Source0:        https://pypi.io/packages/source/m/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Patch0:         relax-pillow-dep.patch
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(imageio-ffmpeg)
 BuildRequires:  python3dist(proglog)
+BuildRequires:  python3dist(pip)
 
 Requires: python3dist(imageio-ffmpeg)
 Requires: python3dist(proglog)
@@ -26,7 +28,7 @@ examples of use at https://zulko.github.io/moviepy/gallery.html.
 
 
 %prep
-%setup -q -n %{pypi_name}-%{version}
+%autosetup -n %{pypi_name}-%{version} -p1
 
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
@@ -38,7 +40,7 @@ rm -rf %{pypi_name}.egg-info
 %py_install
 
 %files
-%doc README.rst docs
+%doc README* docs
 %license LICENCE.txt
-%{python_sitelib}/moviepy-%{version}-py*.*.egg-info/
+%{python_sitelib}/moviepy-%{version}.dist-info
 %{python_sitelib}/moviepy/*
