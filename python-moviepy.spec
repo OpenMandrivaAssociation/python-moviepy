@@ -1,8 +1,8 @@
 %global pypi_name moviepy
 
 Name:           python-%{pypi_name}
-Version:        1.0.3
-Release:        5
+Version:        2.2.1
+Release:        1
 Group:          Development/Python
 Summary:        Video editing with Python
 License:        MIT
